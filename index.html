@@ -56,6 +56,9 @@
                 />
                 <span class="ml-2">cm</span>
               </p>
+              <p class="text-left font-medium text-2xl">
+                Area: <span id="triangle-area"></span> cm<sup>2</sup>
+              </p>
               <div class="card-actions">
                 <button
                   onclick="calculateTriangleArea()"
@@ -87,6 +90,9 @@
                   placeholder="length"
                 />
                 <span class="ml-2">cm</span>
+              </p>
+              <p class="text-left font-medium text-2xl">
+                Area: <span id="rectangle-area"></span> cm<sup>2</sup>
               </p>
               <div class="card-actions">
                 <button
@@ -122,6 +128,9 @@
                 />
                 <span class="ml-2">cm</span>
               </p>
+              <p class="text-left font-medium text-2xl">
+                Area: <span id="parallelogram-area"></span> cm<sup>2</sup>
+              </p>
               <div class="card-actions">
                 <button
                   onclick="calculateParallelogramArea()"
@@ -153,22 +162,25 @@
             <figure><img src="/images/pentagon.png" alt="pentagon" /></figure>
             <div class="card-body text-center">
               <h2 class="text-center text-2xl font-bold">Pentagon</h2>
-              <p>Area (A) =p×b</p>
+              <p>Area (A) =0.5×p×b</p>
               <p>
                 <input
                   type="text"
-                  id="pentagon-base"
+                  id="pentagon-perimeter"
                   class="border w-24 px-2 text-xl bg-[#F1F1F1]"
-                  placeholder="base"
+                  placeholder="perimeter"
                 />
                 <span class="ml-2">cm</span>
                 <input
                   type="text"
-                  id="pentagon-height"
+                  id="pentagon-apothem"
                   class="border w-24 px-2 text-xl bg-[#F1F1F1]"
-                  placeholder="height"
+                  placeholder="apothem"
                 />
                 <span class="ml-2">cm</span>
+              </p>
+              <p class="text-left font-medium text-2xl">
+                Area: <span id="pentagon-area"></span> cm<sup>2</sup>
               </p>
               <div class="card-actions">
                 <button
