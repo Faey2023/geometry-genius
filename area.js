@@ -9,9 +9,10 @@ function calculateTriangleArea() {
   const heightValueText = heightField.value;
   const height = parseFloat(heightValueText);
   const areaT = 0.5 * base * height;
+  const areaTwo = areaT.toFixed(2);
   // show area
   const areaSpanT = document.getElementById("triangle-area");
-  areaSpanT.innerText = areaT;
+  areaSpanT.innerText = areaTwo;
 }
 //rectangle
 function calculateRectangleArea() {
@@ -20,8 +21,9 @@ function calculateRectangleArea() {
   const length = getInputValue("rectangle-length");
   // area
   const area = width * length;
+  const areaTwo = area.toFixed(2);
   // show area
-  setElementInnerText("rectangle-area", area);
+  setElementInnerText("rectangle-area", areaTwo);
 }
 // Parallelogram
 function calculateParallelogramArea() {
@@ -30,26 +32,30 @@ function calculateParallelogramArea() {
   const height = getInputValue("parallelogram-height");
   // area
   const area = base * height;
-  setElementInnerText("parallelogram-area", area);
+  const areaTwo = area.toFixed(2);
+  setElementInnerText("parallelogram-area", areaTwo);
 }
 function calculateRhombusArea() {
   const d1 = getInputValue("rhombus-d1");
   const d2 = getInputValue("rhombus-d2");
   const area = 0.5 * d1 * d2;
-  setElementInnerText("rhombus-area", area);
+  const areaTwo = area.toFixed(2);
+  setElementInnerText("rhombus-area", areaTwo);
 }
 // pentagon
 function calculatePentagonArea() {
   const perimeter = getInputValue("pentagon-perimeter");
   const apothem = getInputValue("pentagon-apothem");
   const area = 0.5 * perimeter * apothem;
-  setElementInnerText("pentagon-area", area);
+  const areaTwo = area.toFixed(2);
+  setElementInnerText("pentagon-area", areaTwo);
 }
 function calculateEllipseArea() {
   const a = getInputValue("ellipse-a");
   const b = getInputValue("ellipse-b");
   const area = Math.PI * a * b;
-  setElementInnerText("ellipse-area", area);
+  const areaTwo = area.toFixed(2);
+  setElementInnerText("ellipse-area", areaTwo);
 }
 
 //reusable get function
