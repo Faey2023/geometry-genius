@@ -15,35 +15,52 @@ function calculateTriangleArea() {
 }
 //rectangle
 function calculateRectangleArea() {
-  const widthField = document.getElementById("rectangle-width");
-  const widthValueText = widthField.value;
-  const width = parseFloat(widthValueText);
+  const width = getInputValue("rectangle-width");
   //length
-  const lengthField = document.getElementById("rectangle-length");
-  const lengthValueText = lengthField.value;
-  const length = parseFloat(lengthValueText);
+  const length = getInputValue("rectangle-length");
   // area
-  const areaR = width * length;
+  const area = width * length;
   // show area
-  const areaSpanR = document.getElementById("rectangle-area");
-  areaSpanR.innerText = areaR;
+  setElementInnerText("rectangle-area", area);
 }
 // Parallelogram
 function calculateParallelogramArea() {
-  const basePField = document.getElementById("parallelogram-base");
-  const basePvalueText = basePField.value;
-  const baseP = parseFloat(basePvalueText);
+  const base = getInputValue("parallelogram-base");
   // height
-  const heightPField = document.getElementById("parallelogram-height");
-  const heightPValueText = heightPField.value;
-  const heightP = parseFloat(heightPValueText);
+  const height = getInputValue("parallelogram-height");
   // area
-  const areaP = baseP * heightP;
-  // show area
-  const areaSpan = document.getElementById("parallelogram-area");
-  areaSpan.innerText = areaP;
+  const area = base * height;
+  setElementInnerText("parallelogram-area", area);
 }
-function calculateRhombusArea() {}
+function calculateRhombusArea() {
+  const d1 = getInputValue("rhombus-d1");
+  const d2 = getInputValue("rhombus-d2");
+  const area = 0.5 * d1 * d2;
+  setElementInnerText("rhombus-area", area);
+}
 // pentagon
-function calculatePentagonArea() {}
-function calculateEllipseArea() {}
+function calculatePentagonArea() {
+  const perimeter = getInputValue("pentagon-perimeter");
+  const apothem = getInputValue("pentagon-apothem");
+  const area = 0.5 * perimeter * apothem;
+  setElementInnerText("pentagon-area", area);
+}
+function calculateEllipseArea() {
+  const a = getInputValue("ellipse-a");
+  const b = getInputValue("ellipse-b");
+  const area = Math.PI * a * b;
+  setElementInnerText("ellipse-area", area);
+}
+
+//reusable get function
+function getInputValue(fieldId) {
+  const inputField = document.getElementById(fieldId);
+  const inputValueText = inputField.value;
+  const value = parseFloat(inputValueText);
+  return value;
+}
+//reusable set function
+function setElementInnerText(elementId, area) {
+  const element = document.getElementById(elementId);
+  element.innerText = area;
+}

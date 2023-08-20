@@ -147,6 +147,25 @@
             <div class="card-body text-center">
               <h2 class="text-center text-2xl font-bold">Rhombus</h2>
               <p>Area (A) = 0.5 ×d<sub>1</sub>×d<sub>2</sub></p>
+              <p>
+                <input
+                  type="text"
+                  id="rhombus-d1"
+                  class="border w-28 px-2 text-xl bg-[#F1F1F1]"
+                  placeholder="d1"
+                />
+                <span class="ml-2">cm</span>
+                <input
+                  type="text"
+                  id="rhombus-d2"
+                  class="border w-24 px-2 text-xl bg-[#F1F1F1]"
+                  placeholder="d2"
+                />
+                <span class="ml-2">cm</span>
+              </p>
+              <p class="text-left font-medium text-2xl">
+                Area: <span id="rhombus-area"></span> cm<sup>2</sup>
+              </p>
               <div class="card-actions">
                 <button
                   onclick="calculateRhombusArea()"
@@ -167,7 +186,7 @@
                 <input
                   type="text"
                   id="pentagon-perimeter"
-                  class="border w-24 px-2 text-xl bg-[#F1F1F1]"
+                  class="border w-28 px-2 text-xl bg-[#F1F1F1]"
                   placeholder="perimeter"
                 />
                 <span class="ml-2">cm</span>
@@ -198,6 +217,25 @@
             <div class="card-body text-center">
               <h2 class="text-center text-2xl font-bold">Ellipse</h2>
               <p>Area (A) =πab</p>
+              <p>
+                <input
+                  type="text"
+                  id="ellipse-a"
+                  class="border w-28 px-2 text-xl bg-[#F1F1F1]"
+                  placeholder="a"
+                />
+                <span class="ml-2">cm</span>
+                <input
+                  type="text"
+                  id="ellipse-b"
+                  class="border w-24 px-2 text-xl bg-[#F1F1F1]"
+                  placeholder="b"
+                />
+                <span class="ml-2">cm</span>
+              </p>
+              <p class="text-left font-medium text-2xl">
+                Area: <span id="ellipse-area"></span> cm<sup>2</sup>
+              </p>
               <div class="card-actions">
                 <button
                   onclick="calculateEllipseArea()"
